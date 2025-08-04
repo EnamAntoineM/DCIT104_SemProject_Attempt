@@ -10,6 +10,7 @@ node_modules
 /dist
 /.idea
 /.vscode
+/embedded
 
 # OS
 .DS_Store

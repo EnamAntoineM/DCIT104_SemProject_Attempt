@@ -9,6 +9,7 @@
 
 #include <saucer/smartview.hpp>
 #include "include_cpp/my.h"
+#include "embedded/all.hpp"
 
 int main()
 {
@@ -28,7 +29,8 @@ int main()
     smartview.expose("delete_book", BookManager::delete_book);
     smartview.expose("fetchItems", BookManager::get_books);
 
-    smartview.set_url("http://localhost:5173/");
+    smartview.embed(saucer::embedded::all());
+    smartview.serve("index.html");
     smartview.show();
 
     app->run();
